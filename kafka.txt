@@ -1,0 +1,39 @@
+KAFKA on ec2-user
+
+Installation:
+
+sudo apt update
+
+install java
+
+df -h for knowing disk size
+
+extra the zip file :
+
+tar -xzf kafka_2.12-2.7.0.tgz
+
+
+cd kafka_2.12-2.7.0
+
+
+edit the zookeeper properties file so that we can configure the data dir for snapshot
+
+edit server listeners to listen to your private or public
+
+start zookeeper 
+
+edit kafka server properties so that there is no java heap space
+
+start kafka-server(broker)
+
+create a kafka topic
+
+start a producer
+bin/kafka-console-producer.sh --topic test-topic --bootstrap-server 172.31.35.202:9092
+
+start a consumer
+
+bin/kafka-console-producer.sh --topic test-topic --bootstrap-server 172.31.35.202:9092
+
+
+

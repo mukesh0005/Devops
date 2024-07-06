@@ -1,0 +1,14 @@
+sudo apt install docker.io
+
+
+https://stackoverflow.com/questions/54523977/docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socke
+
+
+configure the inbound rules of ec2 to accept from port 3000
+
+
+edit the network access of mongodb
+
+create a .env file to store secrets.
+
+docker build -t my-node-app --build-arg MONGODB_URI="${{ secrets.MONGODB_URI }}" .
